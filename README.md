@@ -1,1 +1,1 @@
-# http://menkudle.github.io
+http://menkudle.github.io
