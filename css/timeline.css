@@ -93,6 +93,10 @@
     opacity: 1;
 }
 
+ul {
+    padding-left: 0;
+}
+
 @media screen and (max-width: 900px) {
     .timeline ul li div {
         width: 250px;
