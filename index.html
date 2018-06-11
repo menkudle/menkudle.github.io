@@ -32,6 +32,24 @@
 </head>
 
 <body id="page-top" class="index">
+	<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution="setup_tool"
+  page_id="194471314711435"
+  logged_in_greeting="Hii ! How can I help you ?"
+  logged_out_greeting="Hii ! How can I help you ?">
+</div>
+
     <div class="ribbon">
         <img alt="I'm on Divine CSS!" style="border: medium none ;position: fixed;z-index: 100000" src="img/IMDivineLeft.gif" width="100" height="98">
     </div>
