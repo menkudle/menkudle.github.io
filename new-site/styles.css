@@ -1,0 +1,24 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Body background color */
+}
+
+.curved-section {
+    background-color: #007bff; /* Section background color */
+    color: white;
+    padding: 40px; /* Space around content */
+    width: 80%; /* Adjust width as needed */
+    max-width: 500px;
+    border-radius: 25px; /* The key property for curved borders */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds subtle depth */
+    text-align: center;
+}
+
+.curved-section h1 {
+    margin-top: 0;
+}
