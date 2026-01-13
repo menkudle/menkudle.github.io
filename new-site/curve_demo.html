@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curved Section Wireframe</title>
+    <style>
+        /* 1. Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        /* 2. Navbar Styling */
+        .navbar {
+            height: 60px;
+            background-color: #fff;
+            border-bottom: 5px solid #000; /* Thick border as per sketch */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* 3. Section Styling */
+        section {
+            min-height: 300px; /* Arbitrary height for demo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            position: relative;
+        }
+
+        /* Colors to visualize the sections */
+        .section-1 { background-color: #f8f9fa; }
+        .section-2 { background-color: #e9ecef; }
+        .section-3 { background-color: #dee2e6; }
+
+        /* 4. The Wave Logic */
+        .wave-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0; /* Removes tiny gap under SVG */
+            transform: rotate(180deg); /* Flips wave to point down */
+        }
+
+        .wave-container svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 60px; /* Adjust this to change wave height */
+        }
+
+        /* This matches the color of the NEXT section to create the seamless look */
+        .wave-container .shape-fill-2 { fill: #e9ecef; }
+        .wave-container .shape-fill-3 { fill: #dee2e6; }
+
+        /* OPTIONAL: If you want the 'Wireframe' look with black lines
+           instead of filled colors, use this SVG styling instead: */
+        .wireframe-style path {
+            stroke: #000;
+            stroke-width: 3px;
+            fill: none !important;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    navbar
+</nav>
+
+<section class="section-1">
+    <p>section 1</p>
+
+    <div class="wave-container">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill-2"></path>
+
+        </svg>
+    </div>
+</section>
+
+<section class="section-2">
+    <p>section 2</p>
+
+    <div class="wave-container">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill-3"></path>
+        </svg>
+    </div>
+</section>
+
+<section class="section-3">
+    <p>section 3</p>
+</section>
+
+</body>
+</html>
