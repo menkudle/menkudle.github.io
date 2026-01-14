@@ -403,7 +403,7 @@ Filename      : main.css
     
     .infoabout__wrap .infoabout__title {
         color: #181715;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
         font-weight: 700;
     }
     /*
@@ -597,5 +597,35 @@ Filename      : main.css
     }
 
     .section__header h1{
+        color: #262a30;;
         font-weight: 900;
+    }
+
+    hr.star-primary-2 {
+        padding: 0;
+        border: none;
+        border-top: solid 5px #262a30;
+        text-align: center;
+        max-width: 250px;
+        margin: 25px auto 30px
+    }
+
+    #skills ul {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 800px
+    }
+
+    #skills li {
+        display: inline-block;
+        margin: 7px;
+        padding: 5px 10px;
+        color: #374054;
+        background: #FFDB67;
+        list-style: none;
+        cursor: default;
+        font-size: 1em;
+        font-weight: 400;
+        border-radius: 10px;
     }
