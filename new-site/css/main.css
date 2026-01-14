@@ -588,3 +588,14 @@ Filename      : main.css
         font-size: 13px;
         letter-spacing: 1px;
     }
+
+    .logotext {
+        font-size: 30px;
+        font-weight: 600;
+        font-family: "Whisper", cursive;
+        font-style: normal;
+    }
+
+    .section__header h1{
+        font-weight: 900;
+    }
