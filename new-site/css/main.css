@@ -7,19 +7,19 @@ Filename      : main.css
 * ----------------------------------------------------------------------------------------
   TABLE OF CONTENT
 * ----------------------------------------------------------------------------------------
-* 01.BASE CSS. 
-    - loadder 
+* 01.BASE CSS.
+    - loadder
 * 02.HEADER SECTION.
-    - navigation 
-* 03.HERO SECTION. 
+    - navigation
+* 03.HERO SECTION.
 * 04.ABOUT SECTION.
 * 05.SERVICES SECTION.
 * 06.PORTFOLIO SECTION.
 * 07.CONTACT SECTION.
-* 08.FOOTER SECTION. 
+* 08.FOOTER SECTION.
 * ----------------------------------------------------------------------------------------
 */
-    
+
     @import url(./vendor/bootstrap/bootstrap.css);
     @import url(./vendor/fontawesome/all.min.css);
     @import url(./vendor/keen-slider.css);
@@ -701,8 +701,8 @@ Filename      : main.css
         border-radius: 50px;
         left: -9px;
         top: 0;
-        background: #18d26e;
-        border: 2px solid #18d26e;
+        background: #000;
+        border: 2px solid #000;
     }
 
 

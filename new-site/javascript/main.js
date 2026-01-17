@@ -72,28 +72,7 @@ const freemaninit = (function() {
         });
         GLightbox();
     };
-    // shuffle portfolio
-    const portofolio = function(e) {
-        var myShuffle = new Shuffle(porto, {
-            itemSelector: '.porfoliowarp__item',
-            buffer: 0,
-            columnThreshold: 0.01,
-            columnWidth: 0,
-            delimiter: null,
-            sizer: null,
-            speed: 250,
-            filterMode: Shuffle.FilterMode.ANY,
-            group: Shuffle.ALL_ITEMS,
-        });
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function(e) {
-                document.querySelector('.active').classList.remove('active');
-                (document.querySelector('.active')) ? document.querySelector('.active').classList.remove('active'): '';
-                this.classList.add('active');
-                myShuffle.filter(e.target.dataset.group);
-            });
-        };
-    };
+
     // scroll spy 
     const scrolspy = function(e) {
         // for clickable event
@@ -193,120 +172,7 @@ const freemaninit = (function() {
             }, false);
         };
     };
-    // services slider 
-    const servicesslider = function(e) {
-        function autoplay(run) {
-            clearInterval(interval);
-            interval = setInterval(() => {
-                if (run && slider) {
-                    slider.next();
-                }
-            }, 5000);
-        };
 
-        function navigation(slider) {
-            function markup(remove) {
-                wrapperMarkup(remove);
-                dotMarkup(remove);
-            };
-
-            function removeElement(elment) {
-                elment.parentNode.removeChild(elment);
-            };
-
-            function createDiv(className) {
-                var div = document.createElement("div");
-                var classNames = className.split(" ");
-                classNames.forEach((name) => div.classList.add(name))
-                return div
-            };
-
-            function wrapperMarkup(remove) {
-                if (remove) {
-                    var parent = wrapper.parentNode
-                    while (wrapper.firstChild)
-                        parent.insertBefore(wrapper.firstChild, wrapper);
-                    removeElement(wrapper);
-                    return
-                };
-                wrapper = createDiv("navigation-wrapper");
-                slider.container.parentNode.appendChild(wrapper);
-                wrapper.appendChild(slider.container);
-            };
-
-            function dotMarkup(remove) {
-                if (remove) {
-                    removeElement(dots);
-                    return
-                };
-                dots = createDiv("dots")
-                slider.track.details.slides.forEach((_e, idx) => {
-                    var dot = createDiv("dot");
-                    dot.addEventListener("click", () => slider.moveToIdx(idx))
-                    dots.appendChild(dot);
-                });
-                wrapper.appendChild(dots);
-            };
-
-            function updateClasses() {
-                var slide = slider.track.details.rel
-                Array.from(dots.children).forEach(function(dot, idx) {
-                    idx === slide ?
-                        dot.classList.add("dot--active") :
-                        dot.classList.remove("dot--active")
-                });
-            };
-
-            slider.on("created", () => {
-                markup();
-                updateClasses();
-            });
-            slider.on("optionsChanged", () => {
-                markup(true);
-                markup();
-                updateClasses();
-            });
-            slider.on("slideChanged", () => {
-                updateClasses();
-            });
-            slider.on("destroyed", () => {
-                markup(true);
-            });
-        };
-        var slider = new KeenSlider(sliderService, {
-            loop: true,
-            mode: "free-snap",
-            breakpoints: {
-                "(min-width: 320px)": {
-                    slides: { perView: 1, spacing: 5 },
-                },
-                "(min-width: 400px)": {
-                    slides: { perView: 1, spacing: 5 },
-                },
-                "(min-width: 1000px)": {
-                    slides: { perView: 3, spacing: 20 },
-                },
-            },
-            slides: {
-                perView: 1,
-                spacing: 20
-            },
-            duration: 3000,
-            dragStart: () => {
-                autoplay(false);
-            },
-            dragEnd: () => {
-                autoplay(true);
-            }
-        }, [navigation]);
-        sliderService.addEventListener("mouseover", (e) => {
-            autoplay(false);
-        });
-        sliderService.addEventListener("mouseout", (e) => {
-            autoplay(true);
-        });
-        autoplay(true);
-    };
     // page scroll
     const scrollpage = function(e) {
         // add fixid class
@@ -334,10 +200,6 @@ const freemaninit = (function() {
             buttonclick();
             //type animation 
             typeanimation();
-            // slider service 
-            servicesslider();
-            // portfolio 
-            portofolio();
             // glightbox 
             glight();
             // year 
