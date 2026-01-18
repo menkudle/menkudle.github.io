@@ -351,18 +351,18 @@ Filename      : main.css
     }
     
     .heroimg {
-        height: 350px;
-        width: 350px;
+        height: 400px;
+        width: 400px;
         margin: 0 auto;
     }
     
     .heroimg .heroimg__poto {
         border-radius: 100%;
-        height: 350px;
-        width: 350px;
+        height: 400px;
+        width: 400px;
         object-fit: cover;
-        box-shadow: 20px 20px 1px 1px #ddaa01;
-        border: 7px solid;
+        box-shadow: 15px 15px 1px 1px #ddaa01;
+        border: 3px solid;
     }
     
     #typed-text {
