@@ -411,7 +411,7 @@ Filename      : main.css
 * ----------------------------------------------------------------------------------------
 */
     
-    #servicesection {
+    #experiencesection {
         background: #FFDB67;
         height: auto;
         padding: 0 0 0;
@@ -447,7 +447,7 @@ Filename      : main.css
 * ----------------------------------------------------------------------------------------
 */
     
-    #portfoliosection {
+    #blogsection {
         background: #ffffff;
         height: auto;
     }
