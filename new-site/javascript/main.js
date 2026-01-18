@@ -63,7 +63,7 @@ const freemaninit = (function() {
     const loadder = function(e) {
         setTimeout(() => {
             document.querySelector(".preloader").style.display = "none";
-        }, 1000);
+        }, 4000);
     };
     // GLightbox
     const glight = function(e) {
