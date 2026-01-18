@@ -88,7 +88,7 @@ const freemaninit = (function() {
         window.onscroll = (() => {
             mainSection.forEach((v, i) => {
                 let rect = v.getBoundingClientRect().y
-                if (rect < window.innerHeight - 100) {
+                if (rect < window.innerHeight - 400) {
                     menuSection.forEach(v => v.classList.remove('activelink'));
                     menuSection[i].classList.add('activelink');
                 }
